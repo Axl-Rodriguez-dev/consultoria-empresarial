@@ -1,0 +1,54 @@
+[
+  {
+    "id": "service-2",
+    "slug": "desarrollo-web",
+    "name": "Desarrollo Web",
+    "shortDescription": "Soluciones tecnológicas modernas: sitios responsivos, e-commerce, aplicaciones web progresivas e integración de APIs para automatizar procesos y mejorar la interoperabilidad.",
+    "description": "En el área de desarrollo web, ofrecemos soluciones tecnológicas modernas que permiten a las empresas fortalecer su presencia digital y mejorar la interacción con sus usuarios. Nuestro enfoque está orientado a la creación de plataformas eficientes, seguras y escalables.",
+    "features": [
+      "Diseño y desarrollo de sitios web responsivos que garantizan una experiencia consistente en diferentes dispositivos.",
+      "Implementación de plataformas de comercio electrónico orientadas a maximizar las conversiones.",
+      "Desarrollo de aplicaciones web progresivas que combinan rendimiento, accesibilidad y facilidad de uso.",
+      "Integración de APIs para automatizar procesos, conectar sistemas y mejorar la interoperabilidad."
+    ],
+    "technologies": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "React",
+      "Node.js",
+      "REST API"
+    ],
+    "featured": false
+  },
+  {
+    "id": "service-1",
+    "slug": "consultoria-empresarial",
+    "name": "Consultoría Empresarial",
+    "shortDescription": "Fortalecemos la toma de decisiones mediante análisis de mercado, diseño de estrategias, optimización de procesos y planificación financiera basada en proyecciones realistas.",
+    "description": "Nuestra línea de consultoría empresarial está diseñada para fortalecer la toma de decisiones mediante información confiable y metodologías estructuradas. A través de estudios detallados y herramientas analíticas, ayudamos a identificar oportunidades de mejora, reducir riesgos y potenciar las capacidades internas de la organización.",
+    "features": [
+      "Análisis de mercado con evaluación de tendencias, comportamiento del consumidor y posicionamiento competitivo.",
+      "Diseño y desarrollo de estrategias empresariales alineadas con los objetivos de crecimiento.",
+      "Optimización de procesos mediante la identificación de cuellos de botella y mejora continua.",
+      "Planificación financiera basada en proyecciones realistas y escenarios de riesgo controlado."
+    ],
+    "technologies": [],
+    "featured": true
+  },
+  {
+    "id": "service-3",
+    "slug": "enfoque-integral",
+    "name": "Enfoque Integral",
+    "shortDescription": "Combinamos análisis estratégico, implementación técnica y seguimiento continuo para medir resultados, realizar ajustes oportunos y garantizar un impacto sostenible en el tiempo.",
+    "description": "Nuestros servicios no se limitan a la ejecución técnica o estratégica de manera aislada. Trabajamos bajo un modelo integral que combina análisis, implementación y seguimiento continuo. Esto nos permite medir resultados, realizar ajustes oportunos.",
+    "features": [
+      "Diagnóstico inicial completo del estado actual de la organización.",
+      "Diseño e implementación de soluciones adaptadas a los objetivos específicos del negocio.",
+      "Seguimiento continuo con indicadores de rendimiento (KPIs) definidos desde el inicio.",
+      "Ajustes y mejoras iterativas para garantizar resultados sostenibles a largo plazo."
+    ],
+    "technologies": [],
+    "featured": false
+  }
+]
