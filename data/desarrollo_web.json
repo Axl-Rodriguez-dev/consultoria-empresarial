@@ -1,0 +1,33 @@
+[
+  {
+    "id": "service-2",
+    "slug": "desarrollo-web",
+    "name": "Desarrollo Web",
+    "category": "Arquitectura y Construcción Digital",
+    "titleAccent": "Escalable y de Alto Impacto",
+    "lead": "No solo creamos sitios, construimos motores de crecimiento. Diseñamos ecosistemas digitales optimizados para la conversión, la velocidad y la seguridad robusta.",
+    "methodology": "Nuestro enfoque se basa en la ingeniería de precisión. Priorizamos los Core Web Vitals de Google para asegurar que tu plataforma domine los resultados de búsqueda y ofrezca una experiencia de usuario fluida en cualquier dispositivo.",
+    "technologies": [
+      "HTML5 / SASS",
+      "JavaScript ES6+",
+      "React.js / Next.js",
+      "Node.js & Express",
+      "PostgreSQL / MongoDB",
+      "Arquitectura Serverless",
+      "SEO Técnico Avanzado",
+      "Seguridad SSL & WAF"
+    ],
+    "process": [
+      { "step": "01", "title": "Estrategia", "text": "Análisis de objetivos, competencia y definición del stack tecnológico ideal." },
+      { "step": "02", "title": "Diseño UI/UX", "text": "Prototipado centrado en el usuario para garantizar una navegación intuitiva." },
+      { "step": "03", "title": "Desarrollo", "text": "Programación modular siguiendo las mejores prácticas de código limpio." },
+      { "step": "04", "title": "Despliegue", "text": "Optimización final, pruebas de carga y lanzamiento en entornos seguros." }
+    ],
+    "features_detail": [
+      { "icon": "🚀", "title": "Velocidad de Carga", "desc": "Optimizamos cada byte para tiempos de respuesta instantáneos." },
+      { "icon": "🛡️", "title": "Seguridad de Grado Bancario", "desc": "Protección avanzada contra ataques y manejo seguro de datos." },
+      { "icon": "📱", "title": "Mobile First", "desc": "Adaptabilidad total asegurando una estética impecable en móviles." },
+      { "icon": "📈", "title": "Conversión", "desc": "Estructuras pensadas para guiar al usuario hacia la acción comercial." }
+    ]
+  }
+]

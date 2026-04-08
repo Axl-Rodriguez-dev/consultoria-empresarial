@@ -538,3 +538,87 @@ a {
     grid-template-columns: 1fr;
   }
 }
+
+
+/* ... Tus variables :root y estilos generales se mantienen igual ... */
+
+.services-grid {
+  margin-top: 44px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  align-items: stretch; /* Cambiado a stretch para igualar alturas */
+}
+
+.service-card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background: #fff;
+  border-radius: 20px;
+  /* ... tus sombras se mantienen ... */
+}
+
+.service-card__body {
+  padding: 24px 24px 28px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  flex: 1;
+}
+
+.service-card__desc {
+  margin: 0 0 20px 0;
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--muted);
+  flex-grow: 1; /* Esto empuja el botón hacia abajo */
+}
+
+/* Estilo del Botón de Detalles */
+.service-card__actions {
+  display: flex;
+  justify-content: center;
+  margin-top: auto;
+  padding-top: 12px;
+}
+
+.btn-details {
+  width: 100%;
+  height: 38px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 1.5px solid var(--accent);
+  color: var(--accent);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.btn-details:hover {
+  background: var(--accent);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(201, 146, 42, 0.2);
+}
+
+/* Botón en tarjeta destacada */
+.service-card--featured .btn-details {
+  background: var(--accent);
+  color: #fff;
+}
+
+.service-card--featured .btn-details:hover {
+  background: #b07d20;
+  border-color: #b07d20;
+}
+
+@media (max-width: 900px) {
+  .services-grid { grid-template-columns: 1fr; }
+  .btn-details { width: min(240px, 100%); }
+}

@@ -1,0 +1,33 @@
+[
+  {
+    "id": "service-1",
+    "slug": "consultoria-empresarial",
+    "name": "Consultoría Empresarial",
+    "category": "Estrategia & Operaciones",
+    "titleAccent": "Transformación y Crecimiento",
+    "lead": "Maximizamos el valor de su organización mediante el diagnóstico preciso y la ejecución de estrategias de alto impacto. Transformamos desafíos operativos en ventajas competitivas sostenibles.",
+    "methodology": "Trabajamos bajo un modelo de consultoría basada en evidencia. No solo entregamos informes; implementamos soluciones prácticas que optimizan la cadena de valor, reducen costos operativos y preparan a su empresa para escalar en mercados globales.",
+    "technologies": [
+      "Análisis FODA Avanzado",
+      "Lean Six Sigma",
+      "Optimización de Procesos",
+      "Balanced Scorecard",
+      "Gestión del Cambio",
+      "Inteligencia de Negocios",
+      "Auditoría Operativa",
+      "Planificación Financiera"
+    ],
+    "process": [
+      { "step": "01", "title": "Diagnóstico", "text": "Identificación de cuellos de botella y brechas de eficiencia en la estructura actual." },
+      { "step": "02", "title": "Diseño Estratégico", "text": "Creación de una hoja de ruta personalizada con KPIs medibles y objetivos claros." },
+      { "step": "03", "title": "Implementación", "text": "Acompañamiento en la ejecución de cambios operativos y formación de equipos." },
+      { "step": "04", "title": "Monitoreo", "text": "Evaluación de resultados y ajustes finos para asegurar la sostenibilidad del modelo." }
+    ],
+    "features_detail": [
+      { "icon": "📈", "title": "Rentabilidad", "desc": "Enfoque directo en la mejora del margen operativo y ROI." },
+      { "icon": "🎯", "title": "Precisión", "desc": "Decisiones basadas en datos reales, no en suposiciones." },
+      { "icon": "🤝", "title": "Liderazgo", "desc": "Fortalecimiento de la cultura organizacional y el mando medio." },
+      { "icon": "🌍", "title": "Escalabilidad", "desc": "Estructuras preparadas para el crecimiento nacional e internacional." }
+    ]
+  }
+]
