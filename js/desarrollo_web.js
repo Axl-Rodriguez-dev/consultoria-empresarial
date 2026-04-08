@@ -16,7 +16,7 @@ function renderPage(srv) {
     document.getElementById('srv-lead').textContent = srv.lead;
     document.getElementById('srv-methodology').textContent = srv.methodology;
 
-    // Stack Tecnológico (Badges)
+    
     const stackGrid = document.getElementById('srv-stack');
     srv.technologies.forEach(tech => {
         const item = document.createElement('span');

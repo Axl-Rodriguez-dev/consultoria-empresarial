@@ -72,9 +72,7 @@ function createServiceCard(service) {
   const detailBtn = document.createElement('a');
   detailBtn.className = 'btn-details';
   
-  // CAMBIO CLAVE: Usamos el slug del JSON para definir a qué archivo ir
-  // Si el slug es "desarrollo-web", irá a "./desarrollo-web.html"
-  // Si el slug es "consultoria-empresarial", irá a "./consultoria-empresarial.html"
+  
   detailBtn.href = `./${service.slug}.html`; 
   
   detailBtn.textContent = 'VER DETALLES';
@@ -83,7 +81,7 @@ function createServiceCard(service) {
   
   actions.appendChild(detailBtn);
 
-  // Construcción final
+  
   body.append(top, divider, desc, actions);
   card.appendChild(body);
 
