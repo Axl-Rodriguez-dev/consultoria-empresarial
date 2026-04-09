@@ -1,0 +1,10 @@
+{
+  "email": "info@empresa.com",
+  "telefono": "+1 (234) 567-890",
+  "direccion": "Calle Principal 123, Ciudad, País 12345",
+  "horario": {
+    "lunes_viernes": "9:00 AM - 6:00 PM",
+    "sabado": "10:00 AM - 2:00 PM",
+    "domingo": "Cerrado"
+  }
+}
