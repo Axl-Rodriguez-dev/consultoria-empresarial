@@ -1,0 +1,120 @@
+body {
+  background: #f5f6f8;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+}
+
+/* HEADER */
+.header {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.header h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+.header p {
+  color: #6b7280;
+  max-width: 600px;
+  margin: auto;
+}
+
+/* GRID */
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding: 0 60px 60px;
+}
+
+/* INFO */
+.contact-info h2 {
+  margin-bottom: 20px;
+}
+
+.info-card {
+  display: flex;
+  align-items: center;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+  font-size: 20px;
+}
+
+.email { background: #e0edff; }
+.phone { background: #d1fae5; }
+.location { background: #ede9fe; }
+
+/* FORM */
+.contact-form {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  font-weight: 500;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 5px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  background: #f9fafb;
+}
+
+textarea {
+  min-height: 100px;
+}
+
+button {
+  margin-top: 20px;
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  background: #020617;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1e293b;
+}
+
+.horario p {
+  margin: 5px 0;
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  .header h1 {
+    font-size: 30px;
+  }
+}

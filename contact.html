@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Contáctenos</title>
+
+  <link rel="stylesheet" href="css/contact.css">
+</head>
+
+<body>
+
+  <header class="header">
+    <h1>Contáctenos</h1>
+    <p>Estamos aquí para ayudarte. Envíanos un mensaje y nos pondremos en contacto contigo lo antes posible.</p>
+  </header>
+
+  <main class="contact-container">
+
+    <!-- IZQUIERDA -->
+    <section class="contact-info">
+
+      <h2>Información de Contacto</h2>
+
+      <div class="info-card">
+        <div class="icon email">📧</div>
+        <div>
+          <h3>Email</h3>
+          <p id="email"></p>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <div class="icon phone">📞</div>
+        <div>
+          <h3>Teléfono</h3>
+          <p id="telefono"></p>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <div class="icon location">📍</div>
+        <div>
+          <h3>Dirección</h3>
+          <p id="direccion"></p>
+        </div>
+      </div>
+
+      <div class="info-card horario">
+		  <div>
+		    <h3>Horario de Atención</h3>
+		    <p id="horario"></p>
+		  </div>
+	</div>
+
+    </section>
+
+    <!-- DERECHA -->
+    <section class="contact-form">
+
+      <h2>Envíanos un Mensaje</h2>
+
+      <form id="formulario">
+
+        <label>Nombre Completo *</label>
+        <input type="text" id="nombre" placeholder="Tu nombre">
+
+        <label>Correo Electrónico *</label>
+        <input type="email" id="emailInput" placeholder="tu@email.com">
+
+        <label>Teléfono</label>
+        <input type="text" id="telefonoInput" placeholder="+1 (234) 567-890">
+
+        <label>Mensaje *</label>
+        <textarea id="mensaje" placeholder="Escribe tu mensaje aquí..."></textarea>
+
+        <button type="submit">
+          ✈️ Enviar Mensaje
+        </button>
+
+      </form>
+
+    </section>
+
+  </main>
+
+  <!-- IMPORTANTE -->
+  
+<script src="js/contact.js"></script>
+  <script src="data/contact.json"></script>
+
+</body>
+</html>
