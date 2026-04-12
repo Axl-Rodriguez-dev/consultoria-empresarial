@@ -9,15 +9,10 @@
  * Autores: Equipo Front-end — Politécnico Grancolombiano 2026
  */
 
-// ─── Constante de clave para localStorage ────────────────────────────────────
+// Clave para guardar favoritos en localStorage
 const FAVORITES_KEY = "ce_favoritos";
 
-// ─── Utilidades de favoritos ─────────────────────────────────────────────────
-
-/**
- * Obtiene los slugs guardados como favoritos desde localStorage.
- * @returns {string[]}
- */
+// Obtiene los favoritos guardados
 function obtenerFavoritos() {
   try {
     return JSON.parse(localStorage.getItem(FAVORITES_KEY)) || [];
@@ -26,69 +21,44 @@ function obtenerFavoritos() {
   }
 }
 
-/**
- * Guarda el array actualizado de favoritos en localStorage.
- * @param {string[]} favoritos
- */
-function guardarFavoritos(favoritos) {
-  localStorage.setItem(FAVORITES_KEY, JSON.stringify(favoritos));
-}
-
-/**
- * Verifica si un slug está en favoritos.
- * @param {string} slug
- * @returns {boolean}
- */
+// Verifica si un servicio está en favoritos
 function esFavorito(slug) {
   return obtenerFavoritos().includes(slug);
 }
 
-/**
- * Agrega o quita un slug de favoritos (toggle).
- * @param {string} slug
- * @returns {boolean} true si quedó como favorito, false si fue eliminado
- */
+// Agrega o quita un servicio de favoritos (toggle)
 function toggleFavorito(slug) {
   const favoritos = obtenerFavoritos();
   const index = favoritos.indexOf(slug);
   if (index === -1) {
     favoritos.push(slug);
-    guardarFavoritos(favoritos);
-    return true;
   } else {
     favoritos.splice(index, 1);
-    guardarFavoritos(favoritos);
-    return false;
   }
+  localStorage.setItem(FAVORITES_KEY, JSON.stringify(favoritos));
+  return index === -1;
 }
 
-// ─── Renderizado de tarjetas ──────────────────────────────────────────────────
-
-/**
- * Construye el HTML de una tarjeta de servicio.
- * @param {Object} servicio - Objeto con los datos del servicio
- * @returns {HTMLElement}
- */
+// Construye el HTML de cada tarjeta usando los campos reales del JSON
 function crearTarjeta(servicio) {
   const esFav = esFavorito(servicio.slug);
 
-  // Contenedor de la tarjeta
   const card = document.createElement("article");
   card.className = "service-card";
   card.dataset.slug = servicio.slug;
-  card.dataset.nombre = servicio.nombre.toLowerCase();
+  // Usa "name" que es el campo real del JSON
+  card.dataset.nombre = servicio.name.toLowerCase();
 
   card.innerHTML = `
-    <!-- Imagen del servicio -->
     <div class="card-img-wrapper">
       <img
         class="card-img"
-        src="${servicio.imagen}"
-        alt="${servicio.nombre}"
+        src="assets/images/${servicio.slug}.jpg"
+        alt="${servicio.name}"
         loading="lazy"
-        onerror="this.src='https://via.placeholder.com/400x220?text=Servicio'"
+        onerror="this.src='https://via.placeholder.com/400x220?text=${servicio.name}'"
       />
-      <!-- Botón de favorito sobre la imagen -->
+      <!-- Botón de favorito -->
       <button
         class="btn-fav ${esFav ? "btn-fav--active" : ""}"
         data-slug="${servicio.slug}"
@@ -107,11 +77,11 @@ function crearTarjeta(servicio) {
       </button>
     </div>
 
-    <!-- Cuerpo de la tarjeta -->
     <div class="card-body">
-      <span class="card-category">${servicio.categoria || "Servicio"}</span>
-      <h2 class="card-title">${servicio.nombre}</h2>
-      <p class="card-desc">${servicio.descripcion}</p>
+      <!-- Usa "name" y "shortDescription" del JSON real -->
+      <span class="card-category">${servicio.featured ? "⭐ Destacado" : "Servicio"}</span>
+      <h2 class="card-title">${servicio.name}</h2>
+      <p class="card-desc">${servicio.shortDescription}</p>
 
       <div class="card-actions">
         <a class="btn btn-primary" href="${servicio.slug}.html">
@@ -125,24 +95,21 @@ function crearTarjeta(servicio) {
     </div>
   `;
 
-  // ── Evento toggle favorito ────────────────────────────────────────────────
+  // Evento toggle favorito
   const btnFav = card.querySelector(".btn-fav");
   btnFav.addEventListener("click", (e) => {
     e.preventDefault();
     const ahora = toggleFavorito(servicio.slug);
 
-    // Actualizar atributos de accesibilidad
     btnFav.setAttribute("aria-pressed", ahora);
     btnFav.setAttribute("aria-label", ahora ? "Quitar de favoritos" : "Agregar a favoritos");
 
-    // Actualizar ícono (relleno o vacío)
     const svgPath = btnFav.querySelector("path");
     if (svgPath) svgPath.setAttribute("fill", ahora ? "currentColor" : "none");
 
-    // Actualizar clase visual
     btnFav.classList.toggle("btn-fav--active", ahora);
 
-    // Feedback visual breve
+    // Animación breve al hacer clic
     btnFav.classList.add("btn-fav--pulse");
     setTimeout(() => btnFav.classList.remove("btn-fav--pulse"), 400);
   });
@@ -150,12 +117,7 @@ function crearTarjeta(servicio) {
   return card;
 }
 
-// ─── Filtro de búsqueda ───────────────────────────────────────────────────────
-
-/**
- * Filtra las tarjetas visibles según el texto ingresado.
- * @param {string} texto
- */
+// Filtro de búsqueda en tiempo real
 function filtrarServicios(texto) {
   const cards = document.querySelectorAll(".service-card");
   const noResults = document.getElementById("noResults");
@@ -172,43 +134,43 @@ function filtrarServicios(texto) {
   if (noResults) noResults.hidden = visibles > 0;
 }
 
-// ─── Carga principal ──────────────────────────────────────────────────────────
-
+// Carga principal
 document.addEventListener("DOMContentLoaded", async () => {
   const grid = document.getElementById("servicesGrid");
   const filterInput = document.getElementById("filterInput");
 
-  // Filtro en tiempo real
+  // Activar filtro en tiempo real
   if (filterInput) {
-    filterInput.addEventListener("input", () => filtrarServicios(filterInput.value));
+    filterInput.addEventListener("input", () =>
+      filtrarServicios(filterInput.value)
+    );
   }
 
   try {
-    // Cargar datos desde el JSON del proyecto
     const response = await fetch("./data/services.json");
     if (!response.ok) throw new Error("No se pudo cargar services.json");
     const servicios = await response.json();
 
-    // Limpiar skeletons y renderizar tarjetas
+    // Limpiar skeletons
     grid.innerHTML = "";
 
     if (!servicios || servicios.length === 0) {
-      grid.innerHTML = `<p class="no-results">No hay servicios disponibles en este momento.</p>`;
+      grid.innerHTML = `<p class="no-results">No hay servicios disponibles.</p>`;
       return;
     }
 
+    // Renderizar cada tarjeta
     servicios.forEach((servicio) => {
       const tarjeta = crearTarjeta(servicio);
       grid.appendChild(tarjeta);
     });
 
   } catch (error) {
-    // Si falla la carga del JSON, mostrar mensaje de error
     console.error("Error al cargar servicios:", error);
     grid.innerHTML = `
       <p class="no-results">
-        ⚠️ No fue posible cargar los servicios. Verifica que el archivo
-        <code>data/services.json</code> exista y sea accesible.
+        ⚠️ No fue posible cargar los servicios.
+        Verifica que <code>data/services.json</code> exista.
       </p>
     `;
   }
