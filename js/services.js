@@ -53,7 +53,7 @@ function crearTarjeta(servicio) {
     <div class="card-img-wrapper">
       <img
         class="card-img"
-        src="assets/images/${servicio.slug}.jpg"
+        src="${servicio.image}"
         alt="${servicio.name}"
         loading="lazy"
         onerror="this.src='https://via.placeholder.com/400x220?text=${servicio.name}'"
