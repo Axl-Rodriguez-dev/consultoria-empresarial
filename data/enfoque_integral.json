@@ -1,0 +1,33 @@
+[
+  {
+    "id": "service-3",
+    "slug": "enfoque-integral",
+    "name": "Enfoque Integral",
+    "category": "Estrategia & Tecnología",
+    "titleAccent": "Soluciones 360°",
+    "lead": "Combinamos análisis estratégico, desarrollo tecnológico y acompañamiento continuo para entregar soluciones completas que generan valor real y sostenible en su organización.",
+    "methodology": "Nuestro modelo integral no separa la estrategia de la tecnología: las tratamos como una sola disciplina. Desde el diagnóstico inicial hasta el seguimiento de resultados, acompañamos cada fase con equipos multidisciplinarios que garantizan coherencia, velocidad y eficiencia en toda la transformación.",
+    "technologies": [
+      "Gestión de Proyectos",
+      "Análisis de KPIs",
+      "Transformación Digital",
+      "Agile / Scrum",
+      "Design Thinking",
+      "Gestión del Cambio",
+      "Business Intelligence",
+      "Integración de Sistemas"
+    ],
+    "process": [
+      { "step": "01", "title": "Diagnóstico 360°", "text": "Evaluamos el estado actual de la organización desde todas las dimensiones: estratégica, tecnológica, operativa y humana." },
+      { "step": "02", "title": "Diseño de Solución", "text": "Creamos un plan integrado que combina consultoría, tecnología y gestión del cambio adaptado a su realidad." },
+      { "step": "03", "title": "Implementación", "text": "Ejecutamos las soluciones de forma coordinada con equipos multidisciplinarios garantizando calidad y velocidad." },
+      { "step": "04", "title": "Medición y Mejora", "text": "Monitoreamos KPIs en tiempo real y realizamos ajustes iterativos para asegurar resultados sostenibles a largo plazo." }
+    ],
+    "features_detail": [
+      { "icon": "🔗", "title": "Integración Total", "desc": "Unificamos estrategia y tecnología en un solo proceso cohesionado sin fricciones entre áreas." },
+      { "icon": "📊", "title": "Métricas Claras", "desc": "KPIs definidos desde el inicio para medir el impacto real y tangible de cada acción ejecutada." },
+      { "icon": "🔄", "title": "Mejora Continua", "desc": "Ciclos iterativos de ajuste y optimización para mantener el crecimiento sostenido en el tiempo." },
+      { "icon": "🛡️", "title": "Riesgo Controlado", "desc": "Identificamos y mitigamos riesgos en cada etapa del proceso antes de que se conviertan en problemas." }
+    ]
+  }
+]
